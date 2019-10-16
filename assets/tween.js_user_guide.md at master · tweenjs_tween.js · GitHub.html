@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+  <link rel="dns-prefetch" href="https://assets-cdn.github.com/">
+  <link rel="dns-prefetch" href="https://avatars0.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://avatars1.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://avatars2.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://github-cloud.s3.amazonaws.com/">
+  <link rel="dns-prefetch" href="https://user-images.githubusercontent.com/">
+
+
+
+  <link crossorigin="anonymous" media="all" integrity="sha512-lLo2nlsdl+bHLu6PGvC2j3wfP45RnK4wKQLiPnCDcuXfU38AiD+JCdMywnF3WbJC1jaxe3lAI6AM4uJuMFBLEw==" rel="stylesheet" href="./tween.js_user_guide.md at master · tweenjs_tween.js · GitHub_files/frameworks-08fc49d3bd2694c870ea23d0906f3610.css">
+  <link crossorigin="anonymous" media="all" integrity="sha512-W9L323cuphhBv4vNladlNk8BLdMyLuMIbmRIUvguhsFOh9lzoKtVab9+iP0vUmcKVNxsXr50EA0WdHe1pOa6ZQ==" rel="stylesheet" href="./tween.js_user_guide.md at master · tweenjs_tween.js · GitHub_files/github-2e573f171c5df207e0d7aa8b31f34469.css">
+  
+  
+  <link crossorigin="anonymous" media="all" integrity="sha512-pRSniENbHnJR4iic+efkag0DWuX1VEXp2j4NyRnLvnzcD9m/U5d7/LZUhO9OFI+oRHMHpDRGfldeh70YygdXpw==" rel="stylesheet" href="./tween.js_user_guide.md at master · tweenjs_tween.js · GitHub_files/site-ed8336ee6adec04eafc4a119b696ca41.css">
+  
+  
+
+  <meta name="viewport" content="width=device-width">
+  
+  <title>tween.js/user_guide.md at master · tweenjs/tween.js · GitHub</title>
+    <meta name="description" content="Javascript tweening engine. Contribute to tweenjs/tween.js development by creating an account on GitHub.">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://github.com/opensearch.xml" title="GitHub">
+  <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+  <meta property="fb:app_id" content="1401488693436528">
+
+    
+    <meta property="og:image" content="https://avatars2.githubusercontent.com/u/10957092?s=400&amp;v=4"><meta property="og:site_name" content="GitHub"><meta property="og:type" content="object"><meta property="og:title" content="tweenjs/tween.js"><meta property="og:url" content="https://github.com/tweenjs/tween.js"><meta property="og:description" content="Javascript tweening engine. Contribute to tweenjs/tween.js development by creating an account on GitHub.">
+
+  <link rel="assets" href="https://assets-cdn.github.com/">
+  
+  <meta name="pjax-timeout" content="1000">
+  
+  <meta name="request-id" content="F8D7:3250C:1BCCFF7:28F221B:5BF81AC4" data-pjax-transient="">
+
+
+  
+
+  <meta name="selected-link" value="repo_source" data-pjax-transient="">
+
+      <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+    <meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
+    <meta name="google-site-verification" content="GXs5KoUUkNCoaAZn7wPN-t01Pywp9M3sEjnt_3_ZWPc">
+
+  <meta name="octolytics-host" content="collector.githubapp.com"><meta name="octolytics-app-id" content="github"><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event"><meta name="octolytics-dimension-request_id" content="F8D7:3250C:1BCCFF7:28F221B:5BF81AC4"><meta name="octolytics-dimension-region_edge" content="ams"><meta name="octolytics-dimension-region_render" content="iad">
+<meta name="analytics-location" content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show" data-pjax-transient="true">
+
+
+
+    <meta name="google-analytics" content="UA-3769691-2">
+
+
+<meta class="js-ga-set" name="dimension1" content="Logged Out">
+
+
+
+  
+
+      <meta name="hostname" content="github.com">
+    <meta name="user-login" content="">
+
+      <meta name="expected-hostname" content="github.com">
+    <meta name="js-proxy-site-detection-payload" content="OGJlNmNmMmQ0ODRiYzM0YmYxMTcwODk3NjA0Y2VkOGNmYjg3M2YzMGIxNWQ1ZTRlOTA4NDU0Yzg4MzMxZTAwOHx7InJlbW90ZV9hZGRyZXNzIjoiMjEyLjUxLjE1NS4yMjYiLCJyZXF1ZXN0X2lkIjoiRjhENzozMjUwQzoxQkNDRkY3OjI4RjIyMUI6NUJGODFBQzQiLCJ0aW1lc3RhbXAiOjE1NDI5ODY0MzYsImhvc3QiOiJnaXRodWIuY29tIn0=">
+
+    <meta name="enabled-features" content="DASHBOARD_V2_LAYOUT_OPT_IN,EXPLORE_DISCOVER_REPOSITORIES,UNIVERSE_BANNER,MARKETPLACE_PLAN_RESTRICTION_EDITOR">
+
+  <meta name="html-safe-nonce" content="521ad143127bc28c8eda6c75617f5aedbe8f4003">
+
+  <meta http-equiv="x-pjax-version" content="c9e6aa849b8e8aca3677acbd9a0c14c9">
+  
+
+      <link href="https://github.com/tweenjs/tween.js/commits/master.atom" rel="alternate" title="Recent Commits to tween.js:master" type="application/atom+xml">
+
+  <meta name="go-import" content="github.com/tweenjs/tween.js git https://github.com/tweenjs/tween.js.git">
+
+  <meta name="octolytics-dimension-user_id" content="10957092"><meta name="octolytics-dimension-user_login" content="tweenjs"><meta name="octolytics-dimension-repository_id" content="691146"><meta name="octolytics-dimension-repository_nwo" content="tweenjs/tween.js"><meta name="octolytics-dimension-repository_public" content="true"><meta name="octolytics-dimension-repository_is_fork" content="false"><meta name="octolytics-dimension-repository_network_root_id" content="691146"><meta name="octolytics-dimension-repository_network_root_nwo" content="tweenjs/tween.js"><meta name="octolytics-dimension-repository_explore_github_marketplace_ci_cta_shown" content="false">
+
+
+    <link rel="canonical" href="https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md" data-pjax-transient="">
+
+
+  <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+
+  <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+
+  <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#000000">
+  <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://assets-cdn.github.com/favicon.ico">
+
+<meta name="theme-color" content="#1e2327">
+
+
+  <meta name="u2f-support" content="true">
+
+  <link rel="manifest" href="https://github.com/manifest.json" crossorigin="use-credentials">
+
+  </head>
+
+  <body class="logged-out env-production emoji-size-boost page-blob">
+    
+
+  <div class="position-relative js-header-wrapper ">
+    <a href="https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md#start-of-content" tabindex="1" class="px-2 py-4 bg-blue text-white show-on-focus js-skip-to-content">Skip to content</a>
+    <div id="js-pjax-loader-bar" class="pjax-loader-bar"><div class="progress"></div></div>
+
+    
+    
+    
+
+
+
+        
+<header class="Header header-logged-out  position-relative f4 py-3" role="banner">
+  <div class="container-lg d-flex px-3">
+    <div class="d-flex flex-justify-between flex-items-center">
+        <a class="mr-4" href="https://github.com/" aria-label="Homepage" data-ga-click="(Logged out) Header, go to homepage, icon:logo-wordmark; experiment:site_header_dropdowns; group:dropdowns">
+          <svg height="32" class="octicon octicon-mark-github text-white" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+        </a>
+    </div>
+
+    <div class="HeaderMenu HeaderMenu--logged-out d-flex flex-justify-between flex-items-center flex-auto">
+      <div class="d-none">
+        <button class="btn-link js-details-target" type="button" aria-label="Toggle navigation" aria-expanded="false">
+          <svg height="24" class="octicon octicon-x text-gray" viewBox="0 0 12 16" version="1.1" width="18" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"></path></svg>
+        </button>
+      </div>
+
+        <nav class="mt-0" aria-label="Global">
+          <ul class="d-flex list-style-none">
+              <li class="edge-item-fix py-2 position-relative flex-wrap flex-justify-between flex-items-start d-flex flex-nowrap flex-items-center mr-3">
+                <details class="HeaderMenu-details details-overlay details-reset">
+                  <summary class="HeaderMenu-summary HeaderMenu-link px-0 py-2 border-0 no-wrap  d-inline-block">
+                    Why GitHub?
+                    <svg x="0px" y="0px" viewBox="0 0 14 8" xml:space="preserve" fill="none" class="icon-chevon-down-mktg position-relative">
+                      <path d="M1,1l6.2,6L13,1"></path>
+                    </svg>
+                  </summary>
+                  <div class="dropdown-menu flex-auto rounded-1 bg-white px-0  p-4 left-n4 position-absolute">
+                    <a href="https://github.com/features" class="py-2 lh-condensed-ultra d-block link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Features">Features <span class="Bump-link-symbol float-right text-normal text-gray-light">→</span></a>
+                    <ul class="list-style-none f5 pb-3">
+                      <li class="edge-item-fix"><a href="https://github.com/features/code-review/" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Code review">Code review</a></li>
+                      <li class="edge-item-fix"><a href="https://github.com/features/project-management/" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Project management">Project management</a></li>
+                      <li class="edge-item-fix"><a href="https://github.com/features/integrations" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Integrations">Integrations</a></li>
+                      <li class="edge-item-fix"><a href="https://github.com/features#team-management" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Team management">Team management</a></li>
+                      <li class="edge-item-fix"><a href="https://github.com/features#social-coding" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Social coding">Social coding</a></li>
+                      <li class="edge-item-fix"><a href="https://github.com/features#documentation" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Documentation">Documentation</a></li>
+                      <li class="edge-item-fix"><a href="https://github.com/features#code-hosting" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Code hosting">Code hosting</a></li>
+                    </ul>
+
+                    <ul class="list-style-none mb-0 border-lg-top pt-lg-3">
+                      <li class="edge-item-fix"><a href="https://github.com/case-studies" class="py-2 lh-condensed-ultra d-block no-underline link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Case studies">Case Studies <span class="Bump-link-symbol float-right text-normal text-gray-light">→</span></a></li>
+                      <li class="edge-item-fix"><a href="https://github.com/security" class="py-2 lh-condensed-ultra d-block no-underline link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Security">Security <span class="Bump-link-symbol float-right text-normal text-gray-light">→</span></a></li>
+                    </ul>
+                  </div>
+                </details>
+              </li>
+              <li class="py-2 mr-4">
+                <a href="https://github.com/business" class="HeaderMenu-link no-underline py-2 d-block d-lg-inline-block" data-ga-click="(Logged out) Header, go to Business">Business</a>
+              </li>
+
+              <li class="py-2 position-relative flex-wrap flex-justify-between flex-items-start d-flex flex-nowrap flex-items-center mr-3">
+                <details class="HeaderMenu-details details-overlay details-reset">
+                  <summary class="HeaderMenu-summary HeaderMenu-link px-0 py-2 border-0 no-wrap  d-inline-block">
+                    Explore
+                    <svg x="0px" y="0px" viewBox="0 0 14 8" xml:space="preserve" fill="none" class="icon-chevon-down-mktg position-relative">
+                      <path d="M1,1l6.2,6L13,1"></path>
+                    </svg>
+                  </summary>
+
+                  <div class="dropdown-menu flex-auto rounded-1 bg-white px-0 pt-2 pb-0  p-4 left-n4 position-absolute">
+                    <ul class="list-style-none mb-3">
+                      <li class="edge-item-fix"><a href="https://github.com/explore" class="py-2 lh-condensed-ultra d-block link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Features">Explore GitHub <span class="Bump-link-symbol float-right text-normal text-gray-light">→</span></a></li>
+                    </ul>
+
+                    <h4 class="text-gray-light text-normal text-mono f5 mb-2  border-top pt-3">Learn &amp; contribute</h4>
+                    <ul class="list-style-none mb-3">
+                      <li class="edge-item-fix"><a href="https://github.com/topics" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Topics">Topics</a></li>
+                      <li class="edge-item-fix"><a href="https://github.com/collections" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Collections">Collections</a></li>
+                      <li class="edge-item-fix"><a href="https://github.com/trending" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Trending">Trending</a></li>
+                      <li class="edge-item-fix"><a href="https://lab.github.com/" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Learning lab">Learning Lab</a></li>
+                      <li class="edge-item-fix"><a href="https://opensource.guide/" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Open source guides">Open source guides</a></li>
+                    </ul>
+
+                    <h4 class="text-gray-light text-normal text-mono f5 mb-2  border-top pt-3">Connect with others</h4>
+                    <ul class="list-style-none mb-0">
+                      <li class="edge-item-fix"><a href="https://github.com/events" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Events">Events</a></li>
+                      <li class="edge-item-fix"><a href="https://github.community/" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Community forum">Community forum</a></li>
+                      <li class="edge-item-fix"><a href="https://education.github.com/" class="py-2 pb-0 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to GitHub Education">GitHub Education</a></li>
+                    </ul>
+                  </div>
+                </details>
+              </li>
+
+              <li class="py-2 mr-4">
+                <a href="https://github.com/marketplace" class="HeaderMenu-link no-underline py-2 d-block d-lg-inline-block" data-ga-click="(Logged out) Header, go to Marketplace">Marketplace</a>
+              </li>
+              <li class="py-2 position-relative flex-wrap flex-justify-between flex-items-start d-flex flex-nowrap flex-items-center mr-3">
+                <details class="HeaderMenu-details details-overlay details-reset">
+                  <summary class="HeaderMenu-summary HeaderMenu-link px-0 py-2 border-0 no-wrap  d-inline-block">
+                    Pricing
+                    <svg x="0px" y="0px" viewBox="0 0 14 8" xml:space="preserve" fill="none" class="icon-chevon-down-mktg position-relative">
+                       <path d="M1,1l6.2,6L13,1"></path>
+                    </svg>
+                  </summary>
+
+                  <div class="dropdown-menu flex-auto rounded-1 bg-white px-0 pt-2 pb-0  p-4 left-n4 position-absolute">
+                    <a href="https://github.com/pricing" class="pb-2 lh-condensed-ultra d-block link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Pricing">Plans <span class="Bump-link-symbol float-right text-normal text-gray-light">→</span></a>
+                    <ul class="list-style-none mb-3">
+                      <li class="edge-item-fix"><a href="https://github.com/pricing/developer" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Developers">Developer</a></li>
+                      <li class="edge-item-fix"><a href="https://github.com/pricing/team" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Team">Team</a></li>
+                      <li class="edge-item-fix"><a href="https://github.com/pricing/business-cloud" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Business Cloud">Business Cloud</a></li>
+                      <li class="edge-item-fix"><a href="https://github.com/pricing/enterprise" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Enterprise">Enterprise</a></li>
+                    </ul>
+
+                    <ul class="list-style-none mb-0  border-top pt-3">
+                      <li class="edge-item-fix"><a href="https://github.com/pricing#feature-comparison" class="py-2 lh-condensed-ultra d-block no-underline link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Compare features">Compare plans <span class="Bump-link-symbol float-right text-normal text-gray-light">→</span></a></li>
+                      <li class="edge-item-fix"><a href="https://github.com/nonprofit" class="py-2 lh-condensed-ultra d-block no-underline link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Nonprofits">Nonprofit <span class="Bump-link-symbol float-right text-normal text-gray-light">→</span></a></li>
+                      <li class="edge-item-fix"><a href="https://education.github.com/discount_requests/new" class="py-2 pb-0 lh-condensed-ultra d-block no-underline link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Education">Education <span class="Bump-link-symbol float-right text-normal text-gray-light">→</span></a></li>
+                    </ul>
+                  </div>
+                </details>
+              </li>
+          </ul>
+        </nav>
+
+      <div class="d-flex flex-items-center px-0 text-center text-left">
+          <div class="d-lg-flex mr-3">
+            <div class="header-search scoped-search site-scoped-search js-site-search position-relative js-jump-to" role="combobox" aria-owns="jump-to-results" aria-label="Search or jump to" aria-haspopup="listbox" aria-expanded="false">
+  <div class="position-relative">
+    <!-- '"` --><!-- </textarea></xmp> --><form class="js-site-search-form" data-scope-type="Repository" data-scope-id="691146" data-scoped-search-url="/tweenjs/tween.js/search" data-unscoped-search-url="/search" action="https://github.com/tweenjs/tween.js/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+      <label class="form-control header-search-wrapper header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center js-chromeless-input-container">
+        <input type="text" class="form-control header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable" data-hotkey="s,/" name="q" value="" placeholder="Search" data-unscoped-placeholder="Search GitHub" data-scoped-placeholder="Search" autocapitalize="off" aria-autocomplete="list" aria-controls="jump-to-results" aria-label="Search" data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations#csrf-token=fwNa4K6Qum5Ax2UvIG3b7DXAmHEqQb8ux4YCxRTSSxqzQcRR6xHV1auixoAJacYL5FW1YJ4YXAlt8kmza3l+kw==" spellcheck="false" autocomplete="off">
+          <input type="hidden" class="js-site-search-type-field" name="type">
+            <img src="./tween.js_user_guide.md at master · tweenjs_tween.js · GitHub_files/search-shortcut-hint.svg" alt="" class="mr-2 header-search-key-slash">
+
+            <div class="Box position-absolute overflow-hidden d-none jump-to-suggestions js-jump-to-suggestions-container">
+              <ul class="d-none js-jump-to-suggestions-template-container">
+                <li class="d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item" role="option">
+                  <a tabindex="-1" class="no-underline d-flex flex-auto flex-items-center p-2 jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open" href="https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md">
+                    <div class="jump-to-octicon js-jump-to-octicon flex-shrink-0 mr-2 text-center d-none">
+                      <svg height="16" width="16" class="octicon octicon-repo flex-shrink-0 js-jump-to-octicon-repo d-none" title="Repository" aria-label="Repository" viewBox="0 0 12 16" version="1.1" role="img"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"></path></svg>
+                      <svg height="16" width="16" class="octicon octicon-project flex-shrink-0 js-jump-to-octicon-project d-none" title="Project" aria-label="Project" viewBox="0 0 15 16" version="1.1" role="img"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"></path></svg>
+                      <svg height="16" width="16" class="octicon octicon-search flex-shrink-0 js-jump-to-octicon-search d-none" title="Search" aria-label="Search" viewBox="0 0 16 16" version="1.1" role="img"><path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"></path></svg>
+                    </div>
+
+                    <img class="avatar mr-2 flex-shrink-0 js-jump-to-suggestion-avatar d-none" alt="" aria-label="Team" src="https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md" width="28" height="28">
+
+                    <div class="jump-to-suggestion-name js-jump-to-suggestion-name flex-auto overflow-hidden text-left no-wrap css-truncate css-truncate-target">
+                    </div>
+
+                    <div class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none js-jump-to-badge-search">
+                      <span class="js-jump-to-badge-search-text-default d-none" aria-label="in this repository">
+                        In this repository
+                      </span>
+                      <span class="js-jump-to-badge-search-text-global d-none" aria-label="in all of GitHub">
+                        All GitHub
+                      </span>
+                      <span aria-hidden="true" class="d-inline-block ml-1 v-align-middle">↵</span>
+                    </div>
+
+                    <div aria-hidden="true" class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none d-on-nav-focus js-jump-to-badge-jump">
+                      Jump to
+                      <span class="d-inline-block ml-1 v-align-middle">↵</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+              <ul class="d-none js-jump-to-no-results-template-container">
+                <li class="d-flex flex-justify-center flex-items-center p-3 f5 d-none">
+                  <span class="text-gray">No suggested jump to results</span>
+                </li>
+              </ul>
+
+              <ul id="jump-to-results" role="listbox" class="js-navigation-container jump-to-suggestions-results-container js-jump-to-suggestions-results-container">
+                <li class="d-flex flex-justify-center flex-items-center p-0 f5">
+                  <img src="./tween.js_user_guide.md at master · tweenjs_tween.js · GitHub_files/octocat-spinner-128.gif" alt="Octocat Spinner Icon" class="m-2" width="28">
+                </li>
+              </ul>
+            </div>
+      </label>
+</form>  </div>
+</div>
+
+          </div>
+
+        <a class="HeaderMenu-link no-underline mr-3" href="https://github.com/login?return_to=%2Ftweenjs%2Ftween.js%2Fblob%2Fmaster%2Fdocs%2Fuser_guide.md" data-ga-click="(Logged out) Header, clicked Sign in, text:sign-in">Sign&nbsp;in</a>
+          <a class="HeaderMenu-link d-inline-block no-underline border border-gray-dark rounded-1 px-2 py-1" href="https://github.com/join" data-ga-click="(Logged out) Header, clicked Sign up, text:sign-up">Sign&nbsp;up</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+  </div>
+
+  <div id="start-of-content" class="show-on-focus"></div>
+
+    <div id="js-flash-container">
+
+
+</div>
+
+
+
+  <div role="main" class="application-main ">
+        <div itemscope="" itemtype="http://schema.org/SoftwareSourceCode" class="">
+    <div id="js-repo-pjax-container" data-pjax-container="">
+      
+
+
+
+
+
+  
+
+
+
+  <div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav  ">
+    <div class="repohead-details-container clearfix container">
+
+      <ul class="pagehead-actions">
+  <li>
+      <a href="https://github.com/login?return_to=%2Ftweenjs%2Ftween.js" class="btn btn-sm btn-with-count tooltipped tooltipped-s" aria-label="You must be signed in to watch a repository" rel="nofollow">
+    <svg class="octicon octicon-eye v-align-text-bottom" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"></path></svg>
+    Watch
+  </a>
+  <a class="social-count" href="https://github.com/tweenjs/tween.js/watchers" aria-label="220 users are watching this repository">
+    220
+  </a>
+
+  </li>
+
+  <li>
+      <a href="https://github.com/login?return_to=%2Ftweenjs%2Ftween.js" class="btn btn-sm btn-with-count tooltipped tooltipped-s" aria-label="You must be signed in to star a repository" rel="nofollow">
+    <svg class="octicon octicon-star v-align-text-bottom" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>
+    Star
+  </a>
+
+    <a class="social-count js-social-count" href="https://github.com/tweenjs/tween.js/stargazers" aria-label="6029 users starred this repository">
+      6,029
+    </a>
+
+  </li>
+
+  <li>
+      <a href="https://github.com/login?return_to=%2Ftweenjs%2Ftween.js" class="btn btn-sm btn-with-count tooltipped tooltipped-s" aria-label="You must be signed in to fork a repository" rel="nofollow">
+        <svg class="octicon octicon-repo-forked v-align-text-bottom" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>
+        Fork
+      </a>
+
+    <a href="https://github.com/tweenjs/tween.js/network/members" class="social-count" aria-label="1013 users forked this repository">
+      1,013
+    </a>
+  </li>
+</ul>
+
+      <h1 class="public ">
+  <svg class="octicon octicon-repo" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"></path></svg>
+  <span class="author" itemprop="author"><a class="url fn" rel="author" data-hovercard-type="organization" data-hovercard-url="/orgs/tweenjs/hovercard" href="https://github.com/tweenjs" aria-describedby="hovercard-aria-description">tweenjs</a></span><!--
+--><span class="path-divider">/</span><!--
+--><strong itemprop="name"><a data-pjax="#js-repo-pjax-container" href="https://github.com/tweenjs/tween.js">tween.js</a></strong>
+
+</h1>
+
+    </div>
+    
+<nav class="reponav js-repo-nav js-sidenav-container-pjax container" itemscope="" itemtype="http://schema.org/BreadcrumbList" aria-label="Repository" data-pjax="#js-repo-pjax-container">
+
+  <span itemscope="" itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a class="js-selected-navigation-item selected reponav-item" itemprop="url" data-hotkey="g c" aria-current="page" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches repo_packages /tweenjs/tween.js" href="https://github.com/tweenjs/tween.js">
+      <svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"></path></svg>
+      <span itemprop="name">Code</span>
+      <meta itemprop="position" content="1">
+</a>  </span>
+
+    <span itemscope="" itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+      <a itemprop="url" data-hotkey="g i" class="js-selected-navigation-item reponav-item" data-selected-links="repo_issues repo_labels repo_milestones /tweenjs/tween.js/issues" href="https://github.com/tweenjs/tween.js/issues">
+        <svg class="octicon octicon-issue-opened" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg>
+        <span itemprop="name">Issues</span>
+        <span class="Counter">62</span>
+        <meta itemprop="position" content="2">
+</a>    </span>
+
+  <span itemscope="" itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a data-hotkey="g p" itemprop="url" class="js-selected-navigation-item reponav-item" data-selected-links="repo_pulls checks /tweenjs/tween.js/pulls" href="https://github.com/tweenjs/tween.js/pulls">
+      <svg class="octicon octicon-git-pull-request" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>
+      <span itemprop="name">Pull requests</span>
+      <span class="Counter">16</span>
+      <meta itemprop="position" content="3">
+</a>  </span>
+
+
+    <a data-hotkey="g b" class="js-selected-navigation-item reponav-item" data-selected-links="repo_projects new_repo_project repo_project /tweenjs/tween.js/projects" href="https://github.com/tweenjs/tween.js/projects">
+      <svg class="octicon octicon-project" viewBox="0 0 15 16" version="1.1" width="15" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"></path></svg>
+      Projects
+      <span class="Counter">1</span>
+</a>
+
+    <a class="js-selected-navigation-item reponav-item" data-hotkey="g w" data-selected-links="repo_wiki /tweenjs/tween.js/wiki" href="https://github.com/tweenjs/tween.js/wiki">
+      <svg class="octicon octicon-book" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M3 5h4v1H3V5zm0 3h4V7H3v1zm0 2h4V9H3v1zm11-5h-4v1h4V5zm0 2h-4v1h4V7zm0 2h-4v1h4V9zm2-6v9c0 .55-.45 1-1 1H9.5l-1 1-1-1H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h5.5l1 1 1-1H15c.55 0 1 .45 1 1zm-8 .5L7.5 3H2v9h6V3.5zm7-.5H9.5l-.5.5V12h6V3z"></path></svg>
+      Wiki
+</a>
+  <a class="js-selected-navigation-item reponav-item" data-selected-links="repo_graphs repo_contributors dependency_graph pulse alerts security /tweenjs/tween.js/pulse" href="https://github.com/tweenjs/tween.js/pulse">
+    <svg class="octicon octicon-graph" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M16 14v1H0V0h1v14h15zM5 13H3V8h2v5zm4 0H7V3h2v10zm4 0h-2V6h2v7z"></path></svg>
+    Insights
+</a>
+
+</nav>
+
+
+  </div>
+
+<div class="container new-discussion-timeline experiment-repo-nav  ">
+  <div class="repository-content ">
+
+    
+
+  
+    <a class="d-none js-permalink-shortcut" data-hotkey="y" href="https://github.com/tweenjs/tween.js/blob/f58e2f0e6f979ac8261952b1292501a7fed6afcf/docs/user_guide.md">Permalink</a>
+
+    <!-- blob contrib key: blob_contributors:v21:97e6ad0590499c1fdc7a7b7be78954a8 -->
+
+        <div class="signup-prompt-bg rounded-1">
+      <div class="signup-prompt p-4 text-center mb-4 rounded-1">
+        <div class="position-relative">
+          <!-- '"` --><!-- </textarea></xmp> --><form action="https://github.com/site/dismiss_signup_prompt" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="ATOZSYOZ/FqIpVsaSy6iLLC0i0+ym9USQOy6ngulMZegGdkakID+NaC8Yzpt1BfzlhvDq08Bidlxkgiz2LKXHQ==">
+            <button type="submit" class="position-absolute top-0 right-0 btn-link link-gray" data-ga-click="(Logged out) Sign up prompt, clicked Dismiss, text:dismiss">
+              Dismiss
+            </button>
+</form>          <h3 class="pt-2">Join GitHub today</h3>
+          <p class="col-6 mx-auto">GitHub is home to over 28 million developers working together to host and review code, manage projects, and build software together.</p>
+          <a class="btn btn-primary" href="https://github.com/join?source=prompt-blob-show" data-ga-click="(Logged out) Sign up prompt, clicked Sign up, text:sign-up">Sign up</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="file-navigation">
+      
+<div class="select-menu branch-select-menu js-menu-container js-select-menu float-left">
+  <button class=" btn btn-sm select-menu-button js-menu-target css-truncate" data-hotkey="w" type="button" aria-label="Switch branches or tags" aria-expanded="false" aria-haspopup="true">
+      <i>Branch:</i>
+      <span class="js-select-button css-truncate-target">master</span>
+  </button>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax="">
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <svg class="octicon octicon-x js-menu-close" role="img" aria-label="Close" viewBox="0 0 12 16" version="1.1" width="12" height="16"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"></path></svg>
+        <span class="select-menu-title">Switch branches/tags</span>
+      </div>
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Filter branches/tags" id="context-commitish-filter-field" class="form-control js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
+        </div>
+        <div class="select-menu-tabs" role="tablist">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md#" data-tab-filter="branches" data-filter-placeholder="Filter branches/tags" class="js-select-menu-tab" role="tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md#" data-tab-filter="tags" data-filter-placeholder="Find a tag…" class="js-select-menu-tab" role="tab">Tags</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches" role="menu">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/tweenjs/tween.js/blob/bump/docs/user_guide.md" data-name="bump" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                bump
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/tweenjs/tween.js/blob/callbacks/docs/user_guide.md" data-name="callbacks" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                callbacks
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/tweenjs/tween.js/blob/fix-readme-typo/docs/user_guide.md" data-name="fix-readme-typo" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                fix-readme-typo
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/tweenjs/tween.js/blob/gh-pages/docs/user_guide.md" data-name="gh-pages" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                gh-pages
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/tweenjs/tween.js/blob/hashset-wip/docs/user_guide.md" data-name="hashset-wip" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                hashset-wip
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/tweenjs/tween.js/blob/joe-no-pollution/docs/user_guide.md" data-name="joe-no-pollution" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                joe-no-pollution
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open selected" href="https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md" data-name="master" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                master
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/tweenjs/tween.js/blob/mikebolt-patch-1/docs/user_guide.md" data-name="mikebolt-patch-1" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                mikebolt-patch-1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/tweenjs/tween.js/blob/mikebolt-patch-2/docs/user_guide.md" data-name="mikebolt-patch-2" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                mikebolt-patch-2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/tweenjs/tween.js/blob/mikebolt/docs/user_guide.md" data-name="mikebolt" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                mikebolt
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/tweenjs/tween.js/blob/strict/docs/user_guide.md" data-name="strict" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                strict
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/tweenjs/tween.js/blob/timescale/docs/user_guide.md" data-name="timescale" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                timescale
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/tweenjs/tween.js/blob/update-nodeunit/docs/user_guide.md" data-name="update-nodeunit" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                update-nodeunit
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/tweenjs/tween.js/blob/update-semantic-release/docs/user_guide.md" data-name="update-semantic-release" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                update-semantic-release
+              </span>
+            </a>
+        </div>
+
+          <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/tweenjs/tween.js/tree/v16.7.1/docs/user_guide.md" data-name="v16.7.1" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="v16.7.1">
+                v16.7.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/tweenjs/tween.js/tree/v16.7.0/docs/user_guide.md" data-name="v16.7.0" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="v16.7.0">
+                v16.7.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/tweenjs/tween.js/tree/v16.6.0/docs/user_guide.md" data-name="v16.6.0" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="v16.6.0">
+                v16.6.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/tweenjs/tween.js/tree/v16.5.0/docs/user_guide.md" data-name="v16.5.0" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="v16.5.0">
+                v16.5.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/tweenjs/tween.js/tree/v16.3.5/docs/user_guide.md" data-name="v16.3.5" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="v16.3.5">
+                v16.3.5
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/tweenjs/tween.js/tree/v16.3.4/docs/user_guide.md" data-name="v16.3.4" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="v16.3.4">
+                v16.3.4
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/tweenjs/tween.js/tree/v16.3.3/docs/user_guide.md" data-name="v16.3.3" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="v16.3.3">
+                v16.3.3
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/tweenjs/tween.js/tree/v16.3.2/docs/user_guide.md" data-name="v16.3.2" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="v16.3.2">
+                v16.3.2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/tweenjs/tween.js/tree/v16.3.1/docs/user_guide.md" data-name="v16.3.1" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="v16.3.1">
+                v16.3.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/tweenjs/tween.js/tree/v16.3.0/docs/user_guide.md" data-name="v16.3.0" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="v16.3.0">
+                v16.3.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/tweenjs/tween.js/tree/v16.2.0/docs/user_guide.md" data-name="v16.2.0" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="v16.2.0">
+                v16.2.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/tweenjs/tween.js/tree/v16.1.1/docs/user_guide.md" data-name="v16.1.1" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="v16.1.1">
+                v16.1.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/tweenjs/tween.js/tree/v16.1.0/docs/user_guide.md" data-name="v16.1.0" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="v16.1.0">
+                v16.1.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/tweenjs/tween.js/tree/r14/docs/user_guide.md" data-name="r14" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="r14">
+                r14
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/tweenjs/tween.js/tree/r13/docs/user_guide.md" data-name="r13" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="r13">
+                r13
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/tweenjs/tween.js/tree/r12/docs/user_guide.md" data-name="r12" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="r12">
+                r12
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/tweenjs/tween.js/tree/r11/docs/user_guide.md" data-name="r11" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="r11">
+                r11
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/tweenjs/tween.js/tree/r10/docs/user_guide.md" data-name="r10" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="r10">
+                r10
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/tweenjs/tween.js/tree/r9/docs/user_guide.md" data-name="r9" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="r9">
+                r9
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/tweenjs/tween.js/tree/r8/docs/user_guide.md" data-name="r8" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="r8">
+                r8
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/tweenjs/tween.js/tree/r7/docs/user_guide.md" data-name="r7" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="r7">
+                r7
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/tweenjs/tween.js/tree/r6/docs/user_guide.md" data-name="r6" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="r6">
+                r6
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/tweenjs/tween.js/tree/r5/docs/user_guide.md" data-name="r5" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="r5">
+                r5
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/tweenjs/tween.js/tree/r4/docs/user_guide.md" data-name="r4" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="r4">
+                r4
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/tweenjs/tween.js/tree/r3/docs/user_guide.md" data-name="r3" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="r3">
+                r3
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/tweenjs/tween.js/tree/r2/docs/user_guide.md" data-name="r2" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="r2">
+                r2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/tweenjs/tween.js/tree/r1/docs/user_guide.md" data-name="r1" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="r1">
+                r1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/tweenjs/tween.js/tree/16.4/docs/user_guide.md" data-name="16.4" data-skip-pjax="true" rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="16.4">
+                16.4
+              </span>
+            </a>
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+      <div class="BtnGroup float-right">
+        <a href="https://github.com/tweenjs/tween.js/find/master" class="js-pjax-capture-input btn btn-sm BtnGroup-item" data-pjax="" data-hotkey="t">
+          Find file
+        </a>
+        <clipboard-copy for="blob-path" class="btn btn-sm BtnGroup-item" tabindex="0" role="button">
+          Copy path
+        </clipboard-copy>
+      </div>
+      <div id="blob-path" class="breadcrumb">
+        <span class="repo-root js-repo-root"><span class="js-path-segment"><a data-pjax="true" href="https://github.com/tweenjs/tween.js"><span>tween.js</span></a></span></span><span class="separator">/</span><span class="js-path-segment"><a data-pjax="true" href="https://github.com/tweenjs/tween.js/tree/master/docs"><span>docs</span></a></span><span class="separator">/</span><strong class="final-path">user_guide.md</strong>
+      </div>
+    </div>
+
+
+    
+  <div class="commit-tease">
+      <span class="float-right">
+        <a class="commit-tease-sha" href="https://github.com/tweenjs/tween.js/commit/9f8eefa780ca78182aefa27a27f06bce821a35f7" data-pjax="">
+          9f8eefa
+        </a>
+        <relative-time datetime="2017-10-15T23:16:25Z" title="16 Oct 2017, 01:16 CEST">on 16 Oct 2017</relative-time>
+      </span>
+      <div>
+        <a rel="contributor" data-skip-pjax="true" data-hovercard-user-id="591645" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/jtpio"><img class="avatar" src="./tween.js_user_guide.md at master · tweenjs_tween.js · GitHub_files/591645" width="20" height="20" alt="@jtpio"></a>
+        <a class="user-mention" rel="contributor" data-hovercard-user-id="591645" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/jtpio">jtpio</a>
+          <a data-pjax="true" title="Fix link to the unit tests file in the user guide" class="message" href="https://github.com/tweenjs/tween.js/commit/9f8eefa780ca78182aefa27a27f06bce821a35f7">Fix link to the unit tests file in the user guide</a>
+      </div>
+
+    <div class="commit-tease-contributors">
+      
+<details class="details-reset details-overlay details-overlay-dark lh-default text-gray-dark float-left mr-2" id="blob_contributors_box">
+  <summary class="btn-link" aria-haspopup="dialog">
+    
+    <span><strong>8</strong> contributors</span>
+  </summary>
+  <details-dialog class="Box Box--overlay d-flex flex-column anim-fade-in fast " aria-label="Users who have contributed to this file" role="dialog">
+    <div class="Box-header">
+      <button class="Box-btn-octicon btn-octicon float-right" type="button" aria-label="Close dialog" data-close-dialog="">
+        <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"></path></svg>
+      </button>
+      <h3 class="Box-title">Users who have contributed to this file</h3>
+    </div>
+    
+        <ul class="list-style-none overflow-auto">
+            <li class="Box-row">
+              <a class="link-gray-dark no-underline" href="https://github.com/sole">
+                <img class="avatar mr-2" alt="" src="./tween.js_user_guide.md at master · tweenjs_tween.js · GitHub_files/5609" width="20" height="20">
+                sole
+</a>            </li>
+            <li class="Box-row">
+              <a class="link-gray-dark no-underline" href="https://github.com/mikebolt">
+                <img class="avatar mr-2" alt="" src="./tween.js_user_guide.md at master · tweenjs_tween.js · GitHub_files/2136767" width="20" height="20">
+                mikebolt
+</a>            </li>
+            <li class="Box-row">
+              <a class="link-gray-dark no-underline" href="https://github.com/thednp">
+                <img class="avatar mr-2" alt="" src="./tween.js_user_guide.md at master · tweenjs_tween.js · GitHub_files/6761246" width="20" height="20">
+                thednp
+</a>            </li>
+            <li class="Box-row">
+              <a class="link-gray-dark no-underline" href="https://github.com/olizilla">
+                <img class="avatar mr-2" alt="" src="./tween.js_user_guide.md at master · tweenjs_tween.js · GitHub_files/58871" width="20" height="20">
+                olizilla
+</a>            </li>
+            <li class="Box-row">
+              <a class="link-gray-dark no-underline" href="https://github.com/JoshuaSP">
+                <img class="avatar mr-2" alt="" src="./tween.js_user_guide.md at master · tweenjs_tween.js · GitHub_files/6745025" width="20" height="20">
+                JoshuaSP
+</a>            </li>
+            <li class="Box-row">
+              <a class="link-gray-dark no-underline" href="https://github.com/jtpio">
+                <img class="avatar mr-2" alt="" src="./tween.js_user_guide.md at master · tweenjs_tween.js · GitHub_files/591645" width="20" height="20">
+                jtpio
+</a>            </li>
+            <li class="Box-row">
+              <a class="link-gray-dark no-underline" href="https://github.com/andreasplesch">
+                <img class="avatar mr-2" alt="" src="./tween.js_user_guide.md at master · tweenjs_tween.js · GitHub_files/6171115" width="20" height="20">
+                andreasplesch
+</a>            </li>
+            <li class="Box-row">
+              <a class="link-gray-dark no-underline" href="https://github.com/alexburner">
+                <img class="avatar mr-2" alt="" src="./tween.js_user_guide.md at master · tweenjs_tween.js · GitHub_files/409114" width="20" height="20">
+                alexburner
+</a>            </li>
+        </ul>
+
+  </details-dialog>
+</details>
+          <a class="avatar-link" data-hovercard-user-id="5609" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/tweenjs/tween.js/commits/master/docs/user_guide.md?author=sole">
+      <img class="avatar" src="./tween.js_user_guide.md at master · tweenjs_tween.js · GitHub_files/5609" width="20" height="20" alt="@sole"> 
+</a>    <a class="avatar-link" data-hovercard-user-id="2136767" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/tweenjs/tween.js/commits/master/docs/user_guide.md?author=mikebolt">
+      <img class="avatar" src="./tween.js_user_guide.md at master · tweenjs_tween.js · GitHub_files/2136767" width="20" height="20" alt="@mikebolt"> 
+</a>    <a class="avatar-link" data-hovercard-user-id="6761246" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/tweenjs/tween.js/commits/master/docs/user_guide.md?author=thednp">
+      <img class="avatar" src="./tween.js_user_guide.md at master · tweenjs_tween.js · GitHub_files/6761246" width="20" height="20" alt="@thednp"> 
+</a>    <a class="avatar-link" data-hovercard-user-id="58871" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/tweenjs/tween.js/commits/master/docs/user_guide.md?author=olizilla">
+      <img class="avatar" src="./tween.js_user_guide.md at master · tweenjs_tween.js · GitHub_files/58871" width="20" height="20" alt="@olizilla"> 
+</a>    <a class="avatar-link" data-hovercard-user-id="6745025" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/tweenjs/tween.js/commits/master/docs/user_guide.md?author=JoshuaSP">
+      <img class="avatar" src="./tween.js_user_guide.md at master · tweenjs_tween.js · GitHub_files/6745025" width="20" height="20" alt="@JoshuaSP"> 
+</a>    <a class="avatar-link" data-hovercard-user-id="591645" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/tweenjs/tween.js/commits/master/docs/user_guide.md?author=jtpio">
+      <img class="avatar" src="./tween.js_user_guide.md at master · tweenjs_tween.js · GitHub_files/591645" width="20" height="20" alt="@jtpio"> 
+</a>    <a class="avatar-link" data-hovercard-user-id="6171115" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/tweenjs/tween.js/commits/master/docs/user_guide.md?author=andreasplesch">
+      <img class="avatar" src="./tween.js_user_guide.md at master · tweenjs_tween.js · GitHub_files/6171115" width="20" height="20" alt="@andreasplesch"> 
+</a>    <a class="avatar-link" data-hovercard-user-id="409114" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/tweenjs/tween.js/commits/master/docs/user_guide.md?author=alexburner">
+      <img class="avatar" src="./tween.js_user_guide.md at master · tweenjs_tween.js · GitHub_files/409114" width="20" height="20" alt="@alexburner"> 
+</a>
+
+    </div>
+  </div>
+
+
+
+    <div class="file ">
+      <div class="file-header">
+  <div class="file-actions">
+
+
+    <div class="BtnGroup">
+      <a id="raw-url" class="btn btn-sm BtnGroup-item" href="https://github.com/tweenjs/tween.js/raw/master/docs/user_guide.md">Raw</a>
+        <a class="btn btn-sm js-update-url-with-hash BtnGroup-item" data-hotkey="b" href="https://github.com/tweenjs/tween.js/blame/master/docs/user_guide.md">Blame</a>
+      <a rel="nofollow" class="btn btn-sm BtnGroup-item" href="https://github.com/tweenjs/tween.js/commits/master/docs/user_guide.md">History</a>
+    </div>
+
+        <a class="btn-octicon tooltipped tooltipped-nw" href="https://desktop.github.com/" aria-label="Open this file in GitHub Desktop" data-ga-click="Repository, open with desktop, type:mac">
+            <svg class="octicon octicon-device-desktop" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M15 2H1c-.55 0-1 .45-1 1v9c0 .55.45 1 1 1h5.34c-.25.61-.86 1.39-2.34 2h8c-1.48-.61-2.09-1.39-2.34-2H15c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm0 9H1V3h14v8z"></path></svg>
+        </a>
+
+        <button type="button" class="btn-octicon disabled tooltipped tooltipped-nw" aria-label="You must be signed in to make or propose changes">
+          <svg class="octicon octicon-pencil" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M0 12v3h3l8-8-3-3-8 8zm3 2H1v-2h1v1h1v1zm10.3-9.3L12 6 9 3l1.3-1.3a.996.996 0 0 1 1.41 0l1.59 1.59c.39.39.39 1.02 0 1.41z"></path></svg>
+        </button>
+        <button type="button" class="btn-octicon btn-octicon-danger disabled tooltipped tooltipped-nw" aria-label="You must be signed in to make or propose changes">
+          <svg class="octicon octicon-trashcan" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"></path></svg>
+        </button>
+  </div>
+
+  <div class="file-info">
+      470 lines (304 sloc)
+      <span class="file-info-divider"></span>
+    20 KB
+  </div>
+</div>
+
+      
+  <div id="readme" class="readme blob instapaper_body">
+    <article class="markdown-body entry-content" itemprop="text"><h1><a id="user-content-tweenjs-user-guide" class="anchor" aria-hidden="true" href="https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md#tweenjs-user-guide"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>tween.js user guide</h1>
+<p><em><strong>NOTE</strong> this is a work in progress, please excuse the gaps. Wherever you see something marked as TODO, it's not done yet. If you find that something is unclear or missing details, please <a href="https://github.com/sole/tween.js/issues/new">file an issue</a> and help make this guide better. Or feel free to submit clarifications or improvements of your own if you feel you can help too!</em></p>
+<h2><a id="user-content-what-is-a-tween-how-do-they-work-why-do-you-want-to-use-them" class="anchor" aria-hidden="true" href="https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md#what-is-a-tween-how-do-they-work-why-do-you-want-to-use-them"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What is a tween? How do they work? Why do you want to use them?</h2>
+<p>A tween (from <a href="http://en.wikipedia.org/wiki/Inbetweening" rel="nofollow"><em>in-between</em></a>) is a concept that allows you to change the values of the properties of an object in a smooth way. You just tell it which properties you want to change, which final values should they have when the tween finishes running, and how long should this take, and the tweening engine will take care of finding the intermediate values from the starting to the ending point. For example, suppose you have a <code>position</code> object with <code>x</code> and <code>y</code> coordinates:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> position <span class="pl-k">=</span> { x<span class="pl-k">:</span> <span class="pl-c1">100</span>, y<span class="pl-k">:</span> <span class="pl-c1">0</span> }</pre></div>
+<p>If you wanted to change the <code>x</code> value from <code>100</code> to <code>200</code>, you'd do this:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-c"><span class="pl-c">//</span> Create a tween for position first</span>
+<span class="pl-k">var</span> tween <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">TWEEN.Tween</span>(position);
+
+<span class="pl-c"><span class="pl-c">//</span> Then tell the tween we want to animate the x property over 1000 milliseconds</span>
+<span class="pl-smi">tween</span>.<span class="pl-en">to</span>({ x<span class="pl-k">:</span> <span class="pl-c1">200</span> }, <span class="pl-c1">1000</span>);</pre></div>
+<p>Actually this won't do anything yet. The tween has been created but it's not active. You need to start it:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-c"><span class="pl-c">//</span> And set it to start</span>
+<span class="pl-smi">tween</span>.<span class="pl-c1">start</span>();</pre></div>
+<p>Finally in order to run as smoothly as possible you should call the <code>TWEEN.update</code> function in the same main loop you're using for animating. This generally looks like this:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-en">animate</span>();
+
+<span class="pl-k">function</span> <span class="pl-en">animate</span>() {
+	<span class="pl-en">requestAnimationFrame</span>(animate);
+	<span class="pl-c"><span class="pl-c">//</span> [...]</span>
+	<span class="pl-c1">TWEEN</span>.<span class="pl-en">update</span>();
+	<span class="pl-c"><span class="pl-c">//</span> [...]</span>
+}</pre></div>
+<p>This will take care of updating all active tweens; after 1 second (i.e. 1000 milliseconds) <code>position.x</code> will be <code>200</code>.</p>
+<p>But unless you print the value of <code>x</code> to the console, you can't see its value changing. You might want to use the <code>onUpdate</code> callback:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">tween</span>.<span class="pl-en">onUpdate</span>(<span class="pl-k">function</span>(<span class="pl-smi">object</span>) {
+	<span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-smi">object</span>.<span class="pl-c1">x</span>);
+});</pre></div>
+<p>This function will be called each time the tween is updated; how often this happens depends on many factors--how fast (and how busy!) your computer or device is, for example.</p>
+<p>So far we've only used tweens to print values to the console, but you could use it for things such as animating positions of three.js objects:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> tween <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">TWEEN.Tween</span>(<span class="pl-smi">cube</span>.<span class="pl-smi">position</span>)
+		.<span class="pl-en">to</span>({ x<span class="pl-k">:</span> <span class="pl-c1">100</span>, y<span class="pl-k">:</span> <span class="pl-c1">100</span>, z<span class="pl-k">:</span> <span class="pl-c1">100</span> }, <span class="pl-c1">10000</span>)
+		.<span class="pl-c1">start</span>();
+
+<span class="pl-en">animate</span>();
+
+<span class="pl-k">function</span> <span class="pl-en">animate</span>() {
+	<span class="pl-en">requestAnimationFrame</span>(animate);
+	<span class="pl-c1">TWEEN</span>.<span class="pl-en">update</span>();
+
+	<span class="pl-smi">threeRenderer</span>.<span class="pl-en">render</span>(scene, camera);
+}</pre></div>
+<p>In this case, because the three.js renderer will look at the object's position before rendering, you don't need to use an explicit <code>onUpdate</code> callback.</p>
+<p>You might have noticed something different here too: we're chaining the tween function calls! Each tween function returns the tween instance, so you can rewrite the following code:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> tween <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">TWEEN.Tween</span>(position);
+<span class="pl-smi">tween</span>.<span class="pl-en">to</span>({ x<span class="pl-k">:</span> <span class="pl-c1">200</span> }, <span class="pl-c1">1000</span>);
+<span class="pl-smi">tween</span>.<span class="pl-c1">start</span>();</pre></div>
+<p>into this</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> tween <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">TWEEN.Tween</span>(position)
+	.<span class="pl-en">to</span>({ x<span class="pl-k">:</span> <span class="pl-c1">200</span> }, <span class="pl-c1">1000</span>)
+	.<span class="pl-c1">start</span>();</pre></div>
+<p>You'll see this a lot in the examples, so it's good to be familiar with it! Check <a href="https://github.com/tweenjs/tween.js/blob/master/examples/04_simplest.html">04-simplest</a> for a working example.</p>
+<h2><a id="user-content-animating-with-tweenjs" class="anchor" aria-hidden="true" href="https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md#animating-with-tweenjs"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Animating with tween.js</h2>
+<p>Tween.js doesn't run by itself. You need to tell it when to run, by explicitly calling the <code>update</code> method. The recommended method is to do this inside your main animation loop, which should be called with <code>requestAnimationFrame</code> for getting the best graphics performance:</p>
+<p>We've seen this example before:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-en">animate</span>();
+
+<span class="pl-k">function</span> <span class="pl-en">animate</span>() {
+	<span class="pl-en">requestAnimationFrame</span>(animate);
+	<span class="pl-c"><span class="pl-c">//</span> [...]</span>
+	<span class="pl-c1">TWEEN</span>.<span class="pl-en">update</span>();
+	<span class="pl-c"><span class="pl-c">//</span> [...]</span>
+}</pre></div>
+<p>If called without parameters, <code>update</code> will determine the current time in order to find out how long has it been since the last time it ran.</p>
+<p>However you can also pass an explicit time parameter to <code>update</code>. Thus,</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-c1">TWEEN</span>.<span class="pl-en">update</span>(<span class="pl-c1">100</span>);</pre></div>
+<p>means "update with time = 100 milliseconds". You can use this to make sure that all the time-dependent functions in your code are using the very same time value. For example suppose you've got a player and want to run tweens in sync. Your <code>animate</code> code could look like this:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> currentTime <span class="pl-k">=</span> <span class="pl-smi">player</span>.<span class="pl-smi">currentTime</span>;
+<span class="pl-c1">TWEEN</span>.<span class="pl-en">update</span>(currentTime);</pre></div>
+<p>We use explicit time values for the unit tests. You can have a look at <a href="https://github.com/tweenjs/tween.js/blob/master/test/unit/tests.js">tests.js</a> to see how we call TWEEN.update() with different values in order to simulate time passing.</p>
+<h2><a id="user-content-controlling-a-tween" class="anchor" aria-hidden="true" href="https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md#controlling-a-tween"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Controlling a tween</h2>
+<h3><a id="user-content-start-and-stop" class="anchor" aria-hidden="true" href="https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md#start-and-stop"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>start</code> and <code>stop</code></h3>
+<p>So far we've learnt about the <code>Tween.start</code> method, but there are more methods that control individual tweens. Probably the most important one is the <code>start</code> counterpart: <code>stop</code>. If you want to cancel a tween, just call this method over an individual tween:</p>
+<pre><code>tween.stop();
+</code></pre>
+<p>Stopping a tween that was never started or that has already been stopped has no effect. No errors are thrown either.</p>
+<p>The <code>start</code> method also accepts a <code>time</code> parameter. If you use it, the tween won't start until that particular moment in time; otherwise it will start as soon as possible (i.e. on the next call to <code>TWEEN.update</code>).</p>
+<h3><a id="user-content-update" class="anchor" aria-hidden="true" href="https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md#update"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>update</code></h3>
+<p>Individual tweens also have an <code>update</code> method---this is in fact called by <code>TWEEN.update</code>. You generally don't need to call this directly, but might be useful if you're doing <em>crazy hacks</em>.</p>
+<h3><a id="user-content-chain" class="anchor" aria-hidden="true" href="https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md#chain"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>chain</code></h3>
+<p>Things get more interesting when you sequence different tweens in order, i.e. setup one tween to start once a previous one has finished. We call this <em>chaining tweens</em>, and it's done with the <code>chain</code> method. Thus, to make <code>tweenB</code> start after <code>tweenA</code> finishes:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">tweenA</span>.<span class="pl-en">chain</span>(tweenB);</pre></div>
+<p>Or, for an infinite chain, set <code>tweenA</code> to start once <code>tweenB</code> finishes:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">tweenA</span>.<span class="pl-en">chain</span>(tweenB);
+<span class="pl-smi">tweenB</span>.<span class="pl-en">chain</span>(tweenA);</pre></div>
+<p>Check <a href="https://github.com/tweenjs/tween.js/blob/master/examples/00_hello_world.html">Hello world</a> to see an example of these infinite chains.</p>
+<p>In other cases, you may want to chain multiple tweens to another tween in a way that they (the chained tweens) all start animating at the same time:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">tweenA</span>.<span class="pl-en">chain</span>(tweenB,tweenC);</pre></div>
+<blockquote>
+<p>WARNING: Calling <code>tweenA.chain(tweenB)</code> actually modifies tweenA so that tweenB is always started when tweenA finishes. The return value of <code>chain</code> is just tweenA, not a new tween.</p>
+</blockquote>
+<h3><a id="user-content-repeat" class="anchor" aria-hidden="true" href="https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md#repeat"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>repeat</code></h3>
+<p>If you wanted a tween to repeat forever you could chain it to itself, but a better way is to use the <code>repeat</code> method. It accepts a parameter that describes how many repetitions you want after the first tween is completed:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">tween</span>.<span class="pl-en">repeat</span>(<span class="pl-c1">10</span>); <span class="pl-c"><span class="pl-c">//</span> repeats 10 times after the first tween and stops</span>
+<span class="pl-smi">tween</span>.<span class="pl-en">repeat</span>(<span class="pl-c1">Infinity</span>); <span class="pl-c"><span class="pl-c">//</span> repeats forever</span></pre></div>
+<p>The total number of tweens will be the repeat parameter plus one for the initial tween.
+Check the <a href="https://github.com/tweenjs/tween.js/blob/master/examples/08_repeat.html">Repeat</a> example.</p>
+<h3><a id="user-content-yoyo" class="anchor" aria-hidden="true" href="https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md#yoyo"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>yoyo</code></h3>
+<p>This function only has effect if used along with <code>repeat</code>. When active, the behaviour of the tween will be <em>like a yoyo</em>, i.e. it will bounce to and from the start and end values, instead of just repeating the same sequence from the beginning.</p>
+<h3><a id="user-content-delay" class="anchor" aria-hidden="true" href="https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md#delay"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>delay</code></h3>
+<p>More complex arrangements might require delaying a tween before it actually starts running. You can do that using the <code>delay</code> method:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">tween</span>.<span class="pl-en">delay</span>(<span class="pl-c1">1000</span>);
+<span class="pl-smi">tween</span>.<span class="pl-c1">start</span>();</pre></div>
+<p>will start executing 1 second after the <code>start</code> method has been called.</p>
+<h2><a id="user-content-controlling-all-the-tweens" class="anchor" aria-hidden="true" href="https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md#controlling-all-the-tweens"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Controlling <em>all</em> the tweens</h2>
+<p>The following methods are found in the TWEEN global object, and you generally won't need to use most of them, except for <code>update</code>.</p>
+<h3><a id="user-content-tweenupdatetime" class="anchor" aria-hidden="true" href="https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md#tweenupdatetime"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>TWEEN.update(time)</code></h3>
+<p>We've already talked about this method. It is used to update all the active tweens.</p>
+<p>If <code>time</code> is not specified, it will use the current time.</p>
+<h3><a id="user-content-tweengetall-and-tweenremoveall" class="anchor" aria-hidden="true" href="https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md#tweengetall-and-tweenremoveall"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>TWEEN.getAll</code> and <code>TWEEN.removeAll</code></h3>
+<p>Used to get a reference to the active <code>tweens</code> array and to remove all of them from the array with just one call, respectively.</p>
+<h3><a id="user-content-tweenaddtween-and-tweenremovetween" class="anchor" aria-hidden="true" href="https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md#tweenaddtween-and-tweenremovetween"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>TWEEN.add(tween)</code> and <code>TWEEN.remove(tween)</code></h3>
+<p>Used to add a tween to the list of active tweens, or to remove an specific one from the list, respectively.</p>
+<p>These methods are usually used internally only, but are exposed just in case you want to do something <em>funny</em>.</p>
+<h2><a id="user-content-controlling-groups-of-tweens" class="anchor" aria-hidden="true" href="https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md#controlling-groups-of-tweens"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Controlling groups of tweens</h2>
+<p>Using the <code>TWEEN</code> singleton to manage your tweens can cause issues in large apps with many components. In these cases, you may want to create your own smaller groups of tweens.</p>
+<h4><a id="user-content-example-cross-component-conflict" class="anchor" aria-hidden="true" href="https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md#example-cross-component-conflict"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example: cross-component conflict</h4>
+<p>A conflict can occur if you have multiple components using <code>TWEEN</code>, and each component wants to manage its own set of tweens. If one component calls <code>TWEEN.update()</code> or <code>TWEEN.removeAll()</code> the tweens of other components will also be updated or removed.</p>
+<h4><a id="user-content-creating-your-own-tween-groups" class="anchor" aria-hidden="true" href="https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md#creating-your-own-tween-groups"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Creating your own tween groups</h4>
+<p>To solve this, each component can make their own instance of <code>TWEEN.Group</code> (which is what the global <code>TWEEN</code> object uses internally). These groups can be passed in as a second optional parameter when instantiating a new tween:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> groupA <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">TWEEN.Group</span>();
+<span class="pl-k">var</span> groupB <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">TWEEN.Group</span>();
+
+<span class="pl-k">var</span> tweenA <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">TWEEN.Tween</span>({ x<span class="pl-k">:</span> <span class="pl-c1">1</span> }, groupA)
+	.<span class="pl-en">to</span>({ x<span class="pl-k">:</span> <span class="pl-c1">10</span> }, <span class="pl-c1">100</span>)
+	.<span class="pl-c1">start</span>();
+
+<span class="pl-k">var</span> tweenB <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">TWEEN.Tween</span>({ x<span class="pl-k">:</span> <span class="pl-c1">1</span> }, groupB)
+	.<span class="pl-en">to</span>({ x<span class="pl-k">:</span> <span class="pl-c1">10</span> }, <span class="pl-c1">100</span>)
+	.<span class="pl-c1">start</span>();
+
+<span class="pl-k">var</span> tweenC <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">TWEEN.Tween</span>({ x<span class="pl-k">:</span> <span class="pl-c1">1</span> })
+	.<span class="pl-en">to</span>({ x<span class="pl-k">:</span> <span class="pl-c1">10</span> }, <span class="pl-c1">100</span>)
+	.<span class="pl-c1">start</span>();
+
+<span class="pl-smi">groupA</span>.<span class="pl-en">update</span>(); <span class="pl-c"><span class="pl-c">//</span> only updates tweenA</span>
+<span class="pl-smi">groupB</span>.<span class="pl-en">update</span>(); <span class="pl-c"><span class="pl-c">//</span> only updates tweenB</span>
+<span class="pl-c1">TWEEN</span>.<span class="pl-en">update</span>(); <span class="pl-c"><span class="pl-c">//</span> only updates tweenC</span>
+
+<span class="pl-smi">groupA</span>.<span class="pl-en">removeAll</span>(); <span class="pl-c"><span class="pl-c">//</span> only removes tweenA</span>
+<span class="pl-smi">groupB</span>.<span class="pl-en">removeAll</span>(); <span class="pl-c"><span class="pl-c">//</span> only removes tweenB</span>
+<span class="pl-c1">TWEEN</span>.<span class="pl-en">removeAll</span>(); <span class="pl-c"><span class="pl-c">//</span> only removes tweenC</span>
+</pre></div>
+<p>In this way, each component can handle creating, updating, and destroying its own set of tweens.</p>
+<h2><a id="user-content-changing-the-easing-function-aka-make-it-bouncy" class="anchor" aria-hidden="true" href="https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md#changing-the-easing-function-aka-make-it-bouncy"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Changing the easing function (AKA make it bouncy)</h2>
+<p>Tween.js will perform the interpolation between values (i.e. the easing) in a linear manner, so the change will be directly proportional to the elapsed time. This is predictable but also quite uninteresting visually wise. Worry not--this behaviour can be easily changed using the <code>easing</code> method. For example:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">tween</span>.<span class="pl-en">easing</span>(<span class="pl-c1">TWEEN</span>.<span class="pl-smi">Easing</span>.<span class="pl-smi">Quadratic</span>.<span class="pl-smi">In</span>);</pre></div>
+<p>This will result in the tween slowly starting to change towards the final value, accelerating towards the middle, and then quickly reaching its final value. In contrast, <code>TWEEN.Easing.Quadratic.Out</code> would start changing quickly towards the value, but then slow down as it approaches the final value.</p>
+<h3><a id="user-content-available-easing-functions-tweeneasing" class="anchor" aria-hidden="true" href="https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md#available-easing-functions-tweeneasing"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Available easing functions: <code>TWEEN.Easing</code></h3>
+<p>There are a few existing easing functions provided with tween.js. They are grouped by the type of equation they represent: Linear, Quadratic, Cubic, Quartic, Quintic, Sinusoidal, Exponential, Circular, Elastic, Back and Bounce, and then by the easing type: In, Out and InOut.</p>
+<p>Probably the names won't be saying anything to you unless you're familiar with these concepts already, so it is probably the time to check the <a href="https://github.com/tweenjs/tween.js/blob/master/examples/03_graphs.html">Graphs</a> example, which graphs all the curves in one page so you can compare how they look at a glance.</p>
+<p><em>Credit where credit is due:</em> these functions are derived from the original set of equations that Robert Penner graciously made available as free software a few years ago, but have been optimised to play nicely with JavaScript.</p>
+<h3><a id="user-content-using-a-custom-easing-function" class="anchor" aria-hidden="true" href="https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md#using-a-custom-easing-function"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using a custom easing function</h3>
+<p>Not only can you use any of the existing functions, but you can also provide your own, as long as it follows a couple of conventions:</p>
+<ul>
+<li>it must accept one parameter:
+<ul>
+<li><code>k</code>: the easing progress, or how far along the duration of the tween we are. Allowed values are in the range [0, 1].</li>
+</ul>
+</li>
+<li>it must return a value based on the input parameters.</li>
+</ul>
+<p>The easing function is only called <em>once per tween</em> on each update, no matter how many properties are to be changed. The result is then used with the initial value and the difference (the <em>deltas</em>) between this and the final values, as in this pseudocode:</p>
+<pre><code>easedElapsed = easing(k);
+for each property:
+	newPropertyValue = initialPropertyValue + propertyDelta * easedElapsed;
+</code></pre>
+<p>For the performance obsessed people out there: the deltas are calculated only when <code>start()</code> is called on a tween.</p>
+<p>So let's suppose you wanted to use a custom easing function that eased the values but appplied a Math.floor to the output, so only the integer part would be returned, resulting in a sort of step-ladder output:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">function</span> <span class="pl-en">tenStepEasing</span>(<span class="pl-smi">k</span>) {
+	<span class="pl-k">return</span> <span class="pl-c1">Math</span>.<span class="pl-c1">floor</span>(k <span class="pl-k">*</span> <span class="pl-c1">10</span>) <span class="pl-k">/</span> <span class="pl-c1">10</span>;
+}</pre></div>
+<p>And you could use it in a tween by simply calling its easing method, as we've seen before:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">tween</span>.<span class="pl-en">easing</span>(tenStepEasing);</pre></div>
+<p>Check the <a href="https://github.com/tweenjs/tween.js/blob/master/examples/12_graphs_custom_functions.html">graphs for custom easing functions</a> example to see this in action (and also some <em>metaprogramming</em> for generating step functions).</p>
+<h2><a id="user-content-callbacks" class="anchor" aria-hidden="true" href="https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md#callbacks"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callbacks</h2>
+<p>Another powerful feature is to be able to run your own functions at specific times in each tween's life cycle. This is usually required when changing properties is not enough.</p>
+<p>For example, suppose you're trying to animate some object whose properties can't be accessed directly but require you to call a setter instead. You can use an <code>update</code> callback to read the new updated values and then manually call the setters. All callbacks are passed the tweened object as the only parameter.</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> trickyObjTween <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">TWEEN.Tween</span>({
+	propertyA<span class="pl-k">:</span> <span class="pl-smi">trickyObj</span>.<span class="pl-en">getPropertyA</span>(),
+	propertyB<span class="pl-k">:</span> <span class="pl-smi">trickyObj</span>.<span class="pl-en">getPropertyB</span>()
+})
+	.<span class="pl-en">to</span>({ propertyA<span class="pl-k">:</span> <span class="pl-c1">100</span>, propertyB<span class="pl-k">:</span> <span class="pl-c1">200</span> })
+	.<span class="pl-en">onUpdate</span>(<span class="pl-k">function</span>(<span class="pl-smi">object</span>) {
+		<span class="pl-smi">object</span>.<span class="pl-en">setA</span>( <span class="pl-smi">object</span>.<span class="pl-smi">propertyA</span> );
+		<span class="pl-smi">object</span>.<span class="pl-en">setB</span>( <span class="pl-smi">object</span>.<span class="pl-smi">propertyB</span> );
+	});</pre></div>
+<p>Or imagine you want to play a sound when a tween is started. You can use an <code>start</code> callback:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> tween <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">TWEEN.Tween</span>(obj)
+	.<span class="pl-en">to</span>({ x<span class="pl-k">:</span> <span class="pl-c1">100</span> })
+	.<span class="pl-en">onStart</span>(<span class="pl-k">function</span>() {
+		<span class="pl-smi">sound</span>.<span class="pl-c1">play</span>();
+	});</pre></div>
+<p>The scope for each callback is the tweened object--in this case, <code>obj</code>.</p>
+<h3><a id="user-content-onstart" class="anchor" aria-hidden="true" href="https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md#onstart"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onStart</h3>
+<p>Executed right before the tween starts--i.e. before the deltas are calculated. This will be executed only once per tween, i.e. it will <em>not</em> be run when the tween is repeated via <code>repeat()</code>.</p>
+<p>It is great for synchronising to other events or triggering actions you want to happen when a tween starts.</p>
+<p>The tweened object is passed in as the first parameter.</p>
+<h3><a id="user-content-onstop" class="anchor" aria-hidden="true" href="https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md#onstop"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onStop</h3>
+<p>Executed when a tween is explicitly stopped via <code>stop()</code>, but not when it is completed normally, and before stopping any possible chained tween.</p>
+<p>The tweened object is passed in as the first parameter.</p>
+<h3><a id="user-content-onupdate" class="anchor" aria-hidden="true" href="https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md#onupdate"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onUpdate</h3>
+<p>Executed each time the tween is updated, after the values have been actually updated.</p>
+<p>The tweened object is passed in as the first parameter.</p>
+<h3><a id="user-content-oncomplete" class="anchor" aria-hidden="true" href="https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md#oncomplete"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onComplete</h3>
+<p>Executed when a tween is finished normally (i.e. not stopped).</p>
+<p>The tweened object is passed in as the first parameter.</p>
+<h2><a id="user-content-advanced-tweening" class="anchor" aria-hidden="true" href="https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md#advanced-tweening"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Advanced tweening</h2>
+<h3><a id="user-content-relative-values" class="anchor" aria-hidden="true" href="https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md#relative-values"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Relative values</h3>
+<p>You can also use relative values when using the <code>to</code> method. When the tween is started, Tween.js will read the current property values and apply the relative values to find out the new final values. But <strong>you need to use quotes</strong> or the values will be taken as absolute. Let's see this with an example:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-c"><span class="pl-c">//</span> This will make the `x` property be 100, always</span>
+<span class="pl-k">var</span> absoluteTween <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">TWEEN.Tween</span>(absoluteObj).<span class="pl-en">to</span>({ x<span class="pl-k">:</span> <span class="pl-c1">100</span> });
+
+<span class="pl-c"><span class="pl-c">//</span> Suppose absoluteObj.x is 0 now</span>
+<span class="pl-smi">absoluteTween</span>.<span class="pl-c1">start</span>(); <span class="pl-c"><span class="pl-c">//</span> Makes x go to 100</span>
+
+<span class="pl-c"><span class="pl-c">//</span> Suppose absoluteObj.x is -100 now</span>
+<span class="pl-smi">absoluteTween</span>.<span class="pl-c1">start</span>(); <span class="pl-c"><span class="pl-c">//</span> Makes x go to 100</span>
+
+<span class="pl-c"><span class="pl-c">//</span> In contrast...</span>
+
+<span class="pl-c"><span class="pl-c">//</span> This will make the `x` property be 100 units more,</span>
+<span class="pl-c"><span class="pl-c">//</span> relative to the actual value when it starts</span>
+<span class="pl-k">var</span> relativeTween <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">TWEEN.Tween</span>(relativeObj).<span class="pl-en">to</span>({ x<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>+100<span class="pl-pds">"</span></span> });
+
+<span class="pl-c"><span class="pl-c">//</span> Suppose relativeObj.x is 0 now</span>
+<span class="pl-smi">relativeTween</span>.<span class="pl-c1">start</span>(); <span class="pl-c"><span class="pl-c">//</span> Makes x go to 0 +100 = 100</span>
+
+<span class="pl-c"><span class="pl-c">//</span> Suppose relativeObj.x is -100 now</span>
+<span class="pl-smi">relativeTween</span>.<span class="pl-c1">start</span>(); <span class="pl-c"><span class="pl-c">//</span> Makes x go to -100 +100 = 0</span></pre></div>
+<p>Check <a href="https://github.com/tweenjs/tween.js/blob/master/examples/09_relative_values.html">09_relative_values</a> for an example.</p>
+<h3><a id="user-content-tweening-to-arrays-of-values" class="anchor" aria-hidden="true" href="https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md#tweening-to-arrays-of-values"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tweening to arrays of values</h3>
+<p>In addition to tweening to an absolute or a relative value, you can also have Tween.js change properties across a series of values. To do this, you just need to specify an array of values instead of a single value for a property. For example:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> tween <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">TWEEN.Tween</span>(relativeObj).<span class="pl-en">to</span>({ x<span class="pl-k">:</span> [<span class="pl-c1">0</span>, <span class="pl-k">-</span><span class="pl-c1">100</span>, <span class="pl-c1">100</span>] });</pre></div>
+<p>will make <code>x</code> go from its initial value to 0, -100 and 100.</p>
+<p>The way these values are calculated is as follows:</p>
+<ul>
+<li>first the tween progress is calculated as usual</li>
+<li>the progress (from 0 to 1) is used as input for the interpolation function</li>
+<li>based on the progress and the array of values, an interpolated value is generated</li>
+</ul>
+<p>For example, when the tween has just started (progress is 0), the interpolation function will return the first value in the array. When the tween is halfway, the interpolation function will return a value approximately in the middle of the array, and when the tween is at the end, the interpolation function will return the last value.</p>
+<p>You can change the interpolation function with the <code>interpolation</code> method. For example:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">tween</span>.<span class="pl-en">interpolation</span>( <span class="pl-c1">TWEEN</span>.<span class="pl-smi">Interpolation</span>.<span class="pl-smi">Bezier</span> );</pre></div>
+<p>The following values are available:</p>
+<ul>
+<li>TWEEN.Interpolation.Linear</li>
+<li>TWEEN.Interpolation.Bezier</li>
+<li>TWEEN.Interpolation.CatmullRom</li>
+</ul>
+<p>The default is <code>Linear</code>.</p>
+<p>Note that the interpolation function is global to all properties that are tweened with arrays in the same tween. You can't make property A change with an array and a Linear function, and property B with an array too and a Bezier function using the same tween; you should use two tween objects running over the same object but modifying different properties and using different interpolation functions.</p>
+<p>Check <a href="https://github.com/tweenjs/tween.js/blob/master/examples/06_array_interpolation.html">06_array_interpolation</a> for an example.</p>
+<h2><a id="user-content-getting-the-best-performance" class="anchor" aria-hidden="true" href="https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md#getting-the-best-performance"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Getting the best performance</h2>
+<p>While Tween.js tries to be performant on its own, nothing prevents you from using it in a way that is counterperformant. Here are some of the ways you can avoid slowing down your projects when using Tween.js (or when animating in the web, in general).</p>
+<h3><a id="user-content-use-performant-css" class="anchor" aria-hidden="true" href="https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md#use-performant-css"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Use performant CSS</h3>
+<p>When you try to animate the position of an element in the page, the easiest solution is to animate the <code>top</code> and <code>left</code> style properties, like this:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> element <span class="pl-k">=</span> <span class="pl-c1">document</span>.<span class="pl-c1">getElementById</span>(<span class="pl-s"><span class="pl-pds">'</span>myElement<span class="pl-pds">'</span></span>);
+<span class="pl-k">var</span> tween <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">TWEEN.Tween</span>({ top<span class="pl-k">:</span> <span class="pl-c1">0</span>, left<span class="pl-k">:</span> <span class="pl-c1">0</span> })
+	.<span class="pl-en">to</span>({ top<span class="pl-k">:</span> <span class="pl-c1">100</span>, left<span class="pl-k">:</span> <span class="pl-c1">100</span> }, <span class="pl-c1">1000</span>)
+	.<span class="pl-en">onUpdate</span>(<span class="pl-k">function</span>(<span class="pl-smi">object</span>) {
+		<span class="pl-smi">element</span>.<span class="pl-c1">style</span>.<span class="pl-c1">top</span> <span class="pl-k">=</span> <span class="pl-smi">object</span>.<span class="pl-c1">top</span> <span class="pl-k">+</span> <span class="pl-s"><span class="pl-pds">'</span>px<span class="pl-pds">'</span></span>;
+		<span class="pl-smi">element</span>.<span class="pl-c1">style</span>.<span class="pl-c1">left</span> <span class="pl-k">=</span> <span class="pl-smi">object</span>.<span class="pl-c1">left</span> <span class="pl-k">+</span> <span class="pl-s"><span class="pl-pds">'</span>px<span class="pl-pds">'</span></span>;
+	});</pre></div>
+<p>but this is really inefficient because altering these properties forces the browser to recalculate the layout on each update, and this is a very costly operation. Instead of using these, you should use <code>transform</code>, which doesn't invalidate the layout and will also be hardware accelerated when possible, like this:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> element <span class="pl-k">=</span> <span class="pl-c1">document</span>.<span class="pl-c1">getElementById</span>(<span class="pl-s"><span class="pl-pds">'</span>myElement<span class="pl-pds">'</span></span>);
+<span class="pl-k">var</span> tween <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">TWEEN.Tween</span>({ top<span class="pl-k">:</span> <span class="pl-c1">0</span>, left<span class="pl-k">:</span> <span class="pl-c1">0</span> })
+	.<span class="pl-en">to</span>({ top<span class="pl-k">:</span> <span class="pl-c1">100</span>, left<span class="pl-k">:</span> <span class="pl-c1">100</span> }, <span class="pl-c1">1000</span>)
+	.<span class="pl-en">onUpdate</span>(<span class="pl-k">function</span>(<span class="pl-smi">object</span>) {
+		<span class="pl-smi">element</span>.<span class="pl-c1">style</span>.<span class="pl-smi">transform</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>translate(<span class="pl-pds">'</span></span> <span class="pl-k">+</span> <span class="pl-smi">object</span>.<span class="pl-c1">left</span> <span class="pl-k">+</span> <span class="pl-s"><span class="pl-pds">'</span>px, <span class="pl-pds">'</span></span> <span class="pl-k">+</span> <span class="pl-smi">object</span>.<span class="pl-c1">top</span> <span class="pl-k">+</span> <span class="pl-s"><span class="pl-pds">'</span>px);<span class="pl-pds">'</span></span>;
+	});</pre></div>
+<p>If you want to read more about this, have a look at <a href="http://www.paulirish.com/2012/why-moving-elements-with-translate-is-better-than-posabs-topleft/" rel="nofollow">this article</a>.</p>
+<p>However, if your animation needs are <em>that</em> simple, it might be better to just use CSS animations or transitions, where applicable, so that the browser can optimise as much as possible. Tween.js is most useful when your animation needs involve complex arrangements, i.e. you need to sync several tweens together, have some start after one has finished, loop them a number of times, etc.</p>
+<h3><a id="user-content-be-good-to-the-garbage-collector-alias-the-gc" class="anchor" aria-hidden="true" href="https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md#be-good-to-the-garbage-collector-alias-the-gc"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Be good to the Garbage collector (alias the GC)</h3>
+<p>If you use an <code>onUpdate</code> callback, you need to be very careful with what you put on it. This function will be called many times per second, so if you're doing costly operations on each update, you might block the main thread and cause horrible <em>jank</em>, or---if your operations involve memory allocations, you'll end up getting the garbage collector to run too often, and cause <em>jank</em> too. So just don't do either of those things. Keep your <code>onUpdate</code> callbacks very lightweight, and be sure to also use a memory profiler while you're developing.</p>
+<h2><a id="user-content-crazy-tweening" class="anchor" aria-hidden="true" href="https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md#crazy-tweening"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Crazy tweening</h2>
+<p>This is something you might not use often, but you can use the tweening equations outside of Tween.js. They're just functions, after all. So you could use them to calculate smooth curves as input data. For example, they're used to generate audio data in <a href="http://5013.es/toys/tween.audio/" rel="nofollow">this experiment</a>.</p>
+</article>
+  </div>
+
+    </div>
+
+  
+
+  <details class="details-reset details-overlay details-overlay-dark">
+    <summary data-hotkey="l" aria-label="Jump to line" aria-haspopup="dialog"></summary>
+    <details-dialog class="Box Box--overlay d-flex flex-column anim-fade-in fast linejump" aria-label="Jump to line" role="dialog">
+      <!-- '"` --><!-- </textarea></xmp> --><form class="js-jump-to-line-form Box-body d-flex" action="https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+        <input class="form-control flex-auto mr-3 linejump-input js-jump-to-line-field" type="text" placeholder="Jump to line…" aria-label="Jump to line" autofocus="">
+        <button type="submit" class="btn" data-close-dialog="">Go</button>
+</form>    </details-dialog>
+  </details>
+
+
+  </div>
+  <div class="modal-backdrop js-touch-events"></div>
+</div>
+
+    </div>
+  </div>
+
+  </div>
+
+        
+<div class="footer container-lg px-3" role="contentinfo">
+  <div class="position-relative d-flex flex-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+    <ul class="list-style-none d-flex flex-wrap ">
+      <li class="mr-3">© 2018 <span title="0.13501s from unicorn-5965ff88d-8cjr5">GitHub</span>, Inc.</li>
+        <li class="mr-3"><a data-ga-click="Footer, go to terms, text:terms" href="https://github.com/site/terms">Terms</a></li>
+        <li class="mr-3"><a data-ga-click="Footer, go to privacy, text:privacy" href="https://github.com/site/privacy">Privacy</a></li>
+        <li class="mr-3"><a href="https://github.com/security" data-ga-click="Footer, go to security, text:security">Security</a></li>
+        <li class="mr-3"><a href="https://status.github.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+        <li><a data-ga-click="Footer, go to help, text:help" href="https://help.github.com/">Help</a></li>
+    </ul>
+
+    <a aria-label="Homepage" title="GitHub" class="footer-octicon mr-lg-4" href="https://github.com/">
+      <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+</a>
+   <ul class="list-style-none d-flex flex-wrap ">
+        <li class="mr-3"><a data-ga-click="Footer, go to contact, text:contact" href="https://github.com/contact">Contact GitHub</a></li>
+        <li class="mr-3"><a href="https://github.com/pricing" data-ga-click="Footer, go to Pricing, text:Pricing">Pricing</a></li>
+      <li class="mr-3"><a href="https://developer.github.com/" data-ga-click="Footer, go to api, text:api">API</a></li>
+      <li class="mr-3"><a href="https://training.github.com/" data-ga-click="Footer, go to training, text:training">Training</a></li>
+        <li class="mr-3"><a href="https://blog.github.com/" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+        <li><a data-ga-click="Footer, go to about, text:about" href="https://github.com/about">About</a></li>
+
+    </ul>
+  </div>
+  <div class="d-flex flex-justify-center pb-6">
+    <span class="f6 text-gray-light"></span>
+  </div>
+</div>
+
+
+
+  <div id="ajax-error-message" class="ajax-error-message flash flash-error">
+    <svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg>
+    <button type="button" class="flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+      <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"></path></svg>
+    </button>
+    You can’t perform that action at this time.
+  </div>
+
+
+    
+    <script crossorigin="anonymous" integrity="sha512-Ax8so2RYXS5IplklIjBUPCs/H8jumancM4AKLTR35EuK3eUxGRyo1EkTBkTQnSUzk5ZQ9pYsHYLJ1ImS2Fcerg==" type="application/javascript" src="./tween.js_user_guide.md at master · tweenjs_tween.js · GitHub_files/frameworks-755e0c008571c9f249a478f4cda76ecf.js"></script>
+    
+    <script crossorigin="anonymous" async="async" integrity="sha512-/IYrgXT2u9+JonvqUilfo3zMOrEtCc5hJ+NZmgx2drPCFFSlDkNiQJTj0klUGHcrh041e9qiTrXS7MXQWGg2XQ==" type="application/javascript" src="./tween.js_user_guide.md at master · tweenjs_tween.js · GitHub_files/github-8682c0307974759b5331d7db0917a218.js"></script>
+    
+    
+    
+  <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner d-none">
+    <svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg>
+    <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md">Reload</a> to refresh your session.</span>
+    <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md">Reload</a> to refresh your session.</span>
+  </div>
+  <div class="facebox" id="facebox" style="display:none;">
+  <div class="facebox-popup">
+    <div class="facebox-content" role="dialog" aria-labelledby="facebox-header" aria-describedby="facebox-description">
+    </div>
+    <button type="button" class="facebox-close js-facebox-close" aria-label="Close modal">
+      <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"></path></svg>
+    </button>
+  </div>
+</div>
+
+  <template id="site-details-dialog"></template>
+
+  <div class="Popover js-hovercard-content position-absolute" style="display: none; outline: none;" tabindex="0">
+  <div class="Popover-message Popover-message--bottom-left Popover-message--large Box box-shadow-large" style="width:360px;">
+  </div>
+</div>
+
+<div id="hovercard-aria-description" class="sr-only">
+  Press h to open a hovercard with more details.
+</div>
+
+
+  
+
+
+</body></html>

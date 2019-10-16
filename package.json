@@ -1,0 +1,42 @@
+{
+  "name": "js-three-dee",
+  "version": "1.0.0",
+  "description": "Anaglyphic 3d glasses photo effect for the browser using CSS3 and JS",
+  "main": "postcss.config.js",
+  "devDependencies": {
+    "@tweenjs/tween.js": "^17.2.0",
+    "@types/tween.js": "^16.9.0",
+    "autoprefixer": "^9.3.1",
+    "es6-tween": "^5.3.1",
+    "parcel-bundler": "^1.10.3",
+    "parcel-plugin-eslint": "^1.0.4",
+    "postcss": "^7.0.6",
+    "prettier": "^1.15.2",
+    "pug": "^2.0.3",
+    "sass": "^1.15.1",
+    "sass-lint": "^1.12.1",
+    "tslint": "^5.11.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "tslint-config-prettier": "^1.16.0",
+    "typescript": "^3.1.6"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "build": "parcel build ./src/templates/index.pug",
+    "watch": "parcel watch ./src/templates/index.pug",
+    "serve": "parcel serve ./src/templates/index.pug",
+    "lint-ts": "tslint -c tslint.json 'src/scripts/*.ts'",
+    "lint-sass": "sass-lint -c .sass-lint.yml -v",
+    "lint": "npm run lint-ts && npm run lint-sass"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.fivenine.ch:fivenine/js-three-dee.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tween.js": "^16.6.0"
+  }
+}

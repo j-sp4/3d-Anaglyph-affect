@@ -1,0 +1,91 @@
+.position {
+  width: auto;
+  height: auto;
+}
+.imageEffect {
+  position: relative;
+  width: 800px;
+  height: 400px;
+  // width: 500px;
+  // height: 250px;
+  margin-left: 250px;
+  margin-top: 150px;
+  overflow: hidden;
+}
+.effect {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  perspective: 1000px;
+
+  &--left {
+  }
+
+  &--right {
+  }
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.style-on .effect {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  perspective: 1000px;
+  mix-blend-mode: multiply;
+
+  &--left {
+    // transform: rotateY(-5deg);
+    // margin-left: 5px;
+
+    .color {
+      background: yellow;
+    }
+  }
+
+  &--right {
+    // transform: rotateY(5deg);
+    // margin-left: -5px;
+
+    .color {
+      background: blue;
+    }
+  }
+
+  .color {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    mix-blend-mode: lighten;
+  }
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%);
+  }
+}
+
+.no-mix-blend-mode {
+  .effect {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+    mix-blend-mode: none;
+
+    &--right {
+      display: none;
+    }
+
+    &--left .color {
+      display: none;
+    }
+  }
+}

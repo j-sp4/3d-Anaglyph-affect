@@ -1,0 +1,96 @@
+image: node:10
+
+stages:
+  - build
+  - qa
+  - staging
+
+##############################
+# Templates
+##############################
+.except_master_template: &except_releases
+  except:
+    - master
+    - tags
+
+.on_branches_template: &on_branches
+  only:
+    - branches
+
+.on_releases_template: &on_releases
+  only:
+    - master
+    - tags
+
+##############################
+# Branches
+##############################
+
+build:
+#  <<: *on_branches
+#  <<: *except_releases
+  stage: build
+  script:
+    - npm install --no-audit --loglevel=error
+    - npm run build
+
+test:
+  stage: qa
+  script:
+    - npm install --no-audit --loglevel=error
+    - npm run build
+    - npm run test
+
+lint:
+  stage: qa
+  script:
+    - npm install --no-audit --loglevel=error
+    - npm run lint
+
+audit:
+  stage: qa
+  script:
+    - npm install --no-audit --loglevel=error
+    - npm audit
+  allow_failure: true
+
+
+##############################
+# Functions
+##############################
+.build_functions: &build_functions |
+  # Build functions and variables
+  [[ "$TRACE" ]] && set -x
+  
+  export PROJECT_NAME_LOWER="$(echo $CI_PROJECT_NAME | tr '[:upper:]' '[:lower:]')"
+
+  function git_version() {
+    set -e
+
+    # parse the current git commit hash
+    COMMIT=`git rev-parse HEAD`
+    BRANCH="${CI_COMMIT_REF_NAME}"
+
+    # check if the current commit has a matching tag
+    HAS_TAG=$(git describe --exact-match --abbrev=0 --tags ${COMMIT} 2> /dev/null || true)
+    TAG=$(git describe --tags --abbrev=1)
+
+    # use the matching tag as the version, if available
+    if [ ! -z "$HAS_TAG" ]; then
+      VERSION="${TAG}.${CI_PIPELINE_IID}"
+    else
+      if [ "$BRANCH" = "master" ]; then
+        BRANCH="pre"
+      fi
+
+      VERSION="${TAG}-${BRANCH}"
+    fi
+
+    echo "Git version..."
+    export GITVERSION=${VERSION}
+    echo $GITVERSION
+  }
+  
+before_script:
+  - *build_functions
+
