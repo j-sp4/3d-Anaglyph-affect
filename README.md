@@ -3,6 +3,7 @@
 Anaglyphic 3d glasses photo effect for the browser using CSS3 and JS
 
 js-three-dee tries to use as little javascript as possible to render the anoglyphic 3d glasses effect on your markup script only using javascript for dynamic positioning
+this is the edit from the new branch oooo branchy
 
 ## Setup
 
